@@ -1,14 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import SiteHeader from '../Header/Header';
+import Footer from '../Footer/Footer';
+
+import {Main} from './Layout.styled'
+
 const Layout = ({ children }) => {
     return (
         <>
-            <header></header>
-            <main>
+            <SiteHeader />
+            <Main>
                 {children}
-            </main>
-            <footer></footer>
+            </Main>
+            <Footer />
         </>
     )
 }
