@@ -10,9 +10,13 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background-color: #E1DCD5;
+    background-color: #F3F1F1;
     box-sizing: border-box;
     transition: background-color 250ms ease-in-out;
+  }
+  
+  body.page-home {
+    background-color: #E1DCD5;
   }
   
   body.page-about {
@@ -44,5 +48,12 @@ export const GlobalStyle = createGlobalStyle`
     position: absolute;
     width: 1px;
     word-wrap: normal !important;
+  }
+  
+  ul {
+    font-family: 'Inter', sans-serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 `;

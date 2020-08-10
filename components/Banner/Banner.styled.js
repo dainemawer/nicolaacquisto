@@ -18,4 +18,11 @@ export const LinkItem = styled.a`
   color: #E95D62;
   font-style: italic;
   text-decoration: none;
+  transition: color 250ms ease-in;
+  
+  &:hover,
+  &:focus {
+    color: #C4C4C4;
+    outline: 0;
+  }
 `;

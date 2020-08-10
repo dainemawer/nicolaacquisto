@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Content from '../components/About/Content'
 import dynamic from 'next/dynamic'
 
 const Layout = dynamic(() => import('../components/Layout/Layout'));
@@ -7,7 +8,7 @@ const Layout = dynamic(() => import('../components/Layout/Layout'));
 const About = () => {
     return (
         <Layout>
-            <h1>About</h1>
+            <Content />
         </Layout>
     )
 }

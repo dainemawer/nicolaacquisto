@@ -27,4 +27,11 @@ export const LinkItem = styled.a`
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   text-decoration: none;
+  transition: color 250ms ease-in;
+  
+  &:hover,
+  &:focus {
+    color: #D96666;
+    outline: 0;
+  }
 `;
