@@ -7,7 +7,6 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-  position: absolute;
   width: 100%;
 `;
 
@@ -32,4 +31,19 @@ export const LinkItem = styled.a`
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   text-decoration: none;
+  transition: color 250ms ease-in-out;
+  
+  svg path {
+    transition: fill 250ms ease-in-out;
+  }
+  
+  &:hover,
+  &:focus {
+    color: #D96666;
+    outline: 0;
+    
+    svg path {
+      fill: #D96666;
+    }
+  }
 `;
