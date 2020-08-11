@@ -6,11 +6,11 @@ import Footer from '../Footer/Footer';
 
 import {Main} from './Layout.styled'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
     return (
         <>
             <SiteHeader />
-            <Main>
+            <Main className={className}>
                 {children}
             </Main>
             <Footer />
