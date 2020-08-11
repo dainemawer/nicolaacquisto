@@ -1,13 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
+import projects from '../data/projects'
 
 const Layout = dynamic(() => import('../components/Layout/Layout'));
+const Projects = dynamic(() => import('../components/Projects/Projects'));
 
 const Work = () => {
     return (
         <Layout>
-            <h1>Work</h1>
+            <Projects title="Work" projects={projects} />
         </Layout>
     )
 }
