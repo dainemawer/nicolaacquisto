@@ -9,9 +9,13 @@ export const Section = styled.section`
 
 export const Title = styled.h1`
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
   margin: 0;
+  
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const LinkItem = styled.a`

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import {List, SkillsItem, Widget, WidgetHeading, Wrap} from './About.styled'
+import {Aside, List, SkillsItem, Widget, WidgetHeading, Wrap} from './About.styled'
 
 const Sidebar = () => {
     return (
-        <aside>
+        <Aside>
             <Widget>
                 <WidgetHeading>Skills</WidgetHeading>
                 <Wrap>
@@ -42,7 +42,7 @@ const Sidebar = () => {
                     </List>
                 </Wrap>
             </Widget>
-        </aside>
+        </Aside>
     )
 }
 

@@ -19,8 +19,20 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #E1DCD5;
   }
   
+  body.splash-bg {
+    background-color: #383838;
+  }
+  
   body.page-about {
     background-color: #383838;
+    
+    main {
+      height: auto;
+      
+      @media (min-width: 1240px) {
+        height: calc(100% - 172px);
+      }
+    }
   }
   
   body.page-about * {
@@ -60,5 +72,14 @@ export const GlobalStyle = createGlobalStyle`
   img {
     height: auto;
     max-width: 100%;
+  }
+  
+  #nprogress .bar {
+    background: #E95D62 !important;
+  }
+  
+  #nprogress .spinner-icon {
+    border-top-color: #E95D62;
+    border-left-color: #E95D62;
   }
 `;
