@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   
   @media (min-width: 1240px) {
+    display: grid;
+    grid-gap: 2rem;
     grid-template-columns: 3fr 1fr;
+    width: 100%;
   }
 `;
 
@@ -43,10 +45,15 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h2`
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: 1.2;
-  margin: 0 0 4rem 0;
+  margin: 0 0 2rem 0;
+  
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    margin: 0 0 4rem 0;
+  }
 `;
 
 export const Em = styled.button`
@@ -61,9 +68,13 @@ export const Em = styled.button`
 
 export const Paragraph = styled.p`
   font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 2rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
   
   &:last-child {
     margin-bottom: 0;
@@ -107,4 +118,13 @@ export const WidgetHeading = styled.h3`
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+`;
+
+export const Aside = styled.aside`
+  width: 100%;
+  
+  @media(min-width: 1240px) {
+    width: auto;
+  }
+  
 `;

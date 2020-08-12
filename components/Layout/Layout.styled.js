@@ -4,14 +4,12 @@ export const Main = styled.main`
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  height: auto;
+  height: calc(100% - 172px);
   padding: 2rem;
   
-  @media (min-width: 1240px) {
-    height: calc(100% - 172px);
-  }
-  
   &.projects {
+    height: calc(100% - 172px);
+  
     @media (min-width: 1240px) {
         height: auto;
       }

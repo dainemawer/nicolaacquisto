@@ -35,3 +35,12 @@ export const LinkItem = styled.a`
     outline: 0;
   }
 `;
+
+export const Nav = styled.nav`
+  position: relative;
+  top: -4px;
+  
+  @media(min-width: 768px) {
+    position: static;
+  }
+`;

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-import {Header, List, ListItem, LinkItem} from './Header.styled'
+import {Header, List, ListItem, LinkItem, Nav} from './Header.styled'
 
 const SiteHeader = () => {
     return (
@@ -27,11 +27,10 @@ const SiteHeader = () => {
                             <path d="M395.654 42.2738C403.863 42.2738 409.389 36.0432 409.389 26.6577C409.389 17.1935 403.863 10.9628 395.654 10.9628C387.444 10.9628 381.919 17.1935 381.919 26.6577C381.919 36.0432 387.444 42.2738 395.654 42.2738ZM395.654 38.0938C389.418 38.0938 386.576 32.7307 386.576 26.6577C386.576 20.5848 389.418 15.1429 395.654 15.1429C401.89 15.1429 404.731 20.5848 404.731 26.6577C404.731 32.7307 401.89 38.0938 395.654 38.0938Z" fill="#000000"/>
                             <path d="M420.448 41.9583C422.402 41.9583 424 40.3612 424 38.4092C424 36.4572 422.402 34.8601 420.448 34.8601C418.494 34.8601 416.896 36.4572 416.896 38.4092C416.896 40.3612 418.494 41.9583 420.448 41.9583Z" fill="#000000"/>
                         </svg>
-
                     </a>
                 </Link>
             </div>
-            <nav itemScope="" itemType="https://schema.org/SiteNavigationElement" role="navigation">
+            <Nav itemScope="" itemType="https://schema.org/SiteNavigationElement" role="navigation">
                 <List>
                     <ListItem>
                         <Link href="/work" passHref>
@@ -44,7 +43,7 @@ const SiteHeader = () => {
                         </Link>
                     </ListItem>
                 </List>
-            </nav>
+            </Nav>
         </Header>
     )
 }
