@@ -49,6 +49,7 @@ export const Title = styled.h2`
   font-weight: normal;
   line-height: 1.2;
   margin: 0 0 2rem 0;
+  white-space: break-spaces;
   
   @media (min-width: 768px) {
     font-size: 3rem;
@@ -70,7 +71,8 @@ export const Paragraph = styled.p`
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin: 0 2rem 2rem 0;
+  white-space: break-spaces;
   
   @media (min-width: 768px) {
     font-size: 1.5rem;
