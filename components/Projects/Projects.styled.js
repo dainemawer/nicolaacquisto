@@ -16,8 +16,12 @@ export const Button = styled.button`
 export const Heading = styled.h1`
   font-family: 'Inter', serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.01em;
+  
+  @media(min-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Seperator = styled.span`
@@ -25,23 +29,41 @@ export const Seperator = styled.span`
   display: inline-block;
   margin: 0 1rem;
   height: 1px;
-  width: 83px;
+  width: 53px;
+  
+  @media (min-width: 768px) {
+    width: 83px;
+  }
 `;
 
 export const List = styled.ul`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  
+  @media(min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const ListItem = styled.li`
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.5;
+  margin-bottom: 1rem;
+  
+  @media(min-width: 768px) {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
   
   &::after {
-    content: " / ";
-    padding: 0 1rem;
+    
+    @media (min-width: 768px) {
+      content: " / ";
+      padding: 0 1rem;
+    }
   }
 `;
 
@@ -59,8 +81,12 @@ export const LinkItem = styled.a`
 
 export const Sup = styled.sup`
   display: inline-block;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   margin-left: 0.5rem;
+  
+  @media(min-width: 768px) {
+    font-size: 1.75rem;
+  }
 `;
 
 export const Section = styled.section`
@@ -71,6 +97,11 @@ export const Section = styled.section`
 export const Header = styled.header`
   align-items: center;
   display: flex;
+  margin-bottom: 2rem;
+  
+  @media(min-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const IsoTope = styled.ul`
@@ -81,7 +112,11 @@ export const IsoTope = styled.ul`
 export const IsoTopeItem = styled.li`
   font-family: 'Inter', serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.01em;
   margin: 0 1rem 0 0;
+  
+  @media(min-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;

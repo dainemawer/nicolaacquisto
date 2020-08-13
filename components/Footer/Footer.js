@@ -10,14 +10,14 @@ const SiteFooter = () => {
             <nav itemScope="" itemType="https://schema.org/SiteNavigationElement" role="navigation">
                 <List>
                     <ListItem>
-                        <Link href="/say-hi" passHref>
-                            <LinkItem>Say Hi</LinkItem>
-                        </Link>
+                        <LinkItem href="mailto:nicolaacquisto@gmail.com">
+                            Say Hi
+                        </LinkItem>
                     </ListItem>
                     <ListItem>
-                        <Link href="/thoughts" passHref>
-                            <LinkItem>Thoughts</LinkItem>
-                        </Link>
+                        <LinkItem href="https://medium.com/@nicolaacquisto" target="_blank" rel="noopener noreferrer">
+                            Thoughts
+                        </LinkItem>
                     </ListItem>
                 </List>
             </nav>
