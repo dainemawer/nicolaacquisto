@@ -19,32 +19,11 @@ export const bodyClassName = path => {
         case '/about':
             className = 'page-about';
             break;
-        case '/news':
-            className = 'page-news';
-            break;
-        case '/news/[slug]':
-            className = 'page-news-article';
-            break;
-        case '/projects':
+        case '/work':
             className = 'page-projects';
             break;
-        case '/projects/[slug]':
-            className = 'page-project-article';
-            break;
-        case '/contact':
-            className = 'page-contact';
-            break;
-        case '/privacy-policy':
-            className = 'page-privacy-policy';
-            break;
-        case '/uses':
-            className = 'page-uses';
-            break;
-        case '/terms-and-conditions':
-            className = 'page-terms-and-conditions';
-            break;
-        case '/login':
-            className = 'page-login';
+        case '/work/[slug]':
+            className = 'page-project';
             break;
     }
 

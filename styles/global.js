@@ -44,6 +44,12 @@ export const GlobalStyle = createGlobalStyle`
     fill: #ffffff;
   }
   
+  body.page-project {
+    main {
+        height: auto;
+    }
+  }
+  
   html,
   body,
   #__next {

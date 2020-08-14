@@ -5,6 +5,7 @@ export const Button = styled.button`
     border: 0;
     cursor: pointer;
     transition: color 250ms ease-in;
+    padding: 0;
     
     &:hover,
     &:focus {
@@ -97,6 +98,7 @@ export const Section = styled.section`
 export const Header = styled.header`
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
   
   @media(min-width: 768px) {
