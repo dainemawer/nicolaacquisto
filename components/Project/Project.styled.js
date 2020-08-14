@@ -1,9 +1,18 @@
 import styled from 'styled-components'
 
 export const Grid = styled.div`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 4fr 8fr;
+  position: relative;
+
+  @supports (display: grid) {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: 4fr 8fr;
+      }
+  }
+  
 `;
 
 export const Heading = styled.h1`
@@ -62,4 +71,14 @@ export const Back = styled.button`
       stroke: #D96666;
     }
   }
+`;
+
+export const Sticky = styled.section`
+  position: static;
+  
+  @media (min-width: 768px) {
+      position: sticky;
+      top: 2rem;
+  }
+  
 `;

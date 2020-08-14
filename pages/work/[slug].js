@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 import ProjectContent from "../../components/Project/ProjectContent";
@@ -9,8 +9,9 @@ import {Grid} from '../../components/Project/Project.styled'
 const Layout = dynamic(() => import('../../components/Layout/Layout'));
 
 const SingleWork = () => {
+
     return (
-        <Layout className="projects">
+        <Layout>
             <Grid>
                 <ProjectContent />
                 <ProjectSidebar />
