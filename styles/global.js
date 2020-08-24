@@ -89,4 +89,8 @@ export const GlobalStyle = createGlobalStyle`
     border-top-color: #E95D62;
     border-left-color: #E95D62;
   }
+  
+  .home {
+    justify-content: center;
+  }
 `;

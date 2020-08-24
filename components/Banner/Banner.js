@@ -7,7 +7,7 @@ import {LinkItem, Section, Title} from './Banner.styled'
 const Banner = () => {
     return (
         <Section>
-            <Title>I love telling purpose-driven brand stories through digital experiences. I spend my time doing <Link href="/branding" passHref><LinkItem>branding <sup>01</sup></LinkItem></Link> and <Link href="/ux-design" passHref><LinkItem>UX designs <sup>02</sup></LinkItem></Link> for interesting brands.</Title>
+            <Title>I love telling purpose-driven brand stories through digital experiences. I spend my time doing <Link href="/work/branding" passHref><LinkItem>branding <sup>01</sup></LinkItem></Link> and <Link href="/work/ux-design" passHref><LinkItem>UX designs <sup>02</sup></LinkItem></Link> for interesting brands.</Title>
         </Section>
     )
 }

@@ -21,7 +21,7 @@ export const Heading = styled.h1`
   letter-spacing: 0.01em;
   
   @media(min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
   }
 `;
 
@@ -119,6 +119,10 @@ export const IsoTopeItem = styled.li`
   margin: 0 1rem 0 0;
   
   @media(min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  &.is-active ${Button} {
+    color: #E95D62;
   }
 `;

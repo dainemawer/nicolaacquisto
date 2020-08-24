@@ -1,22 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import PropTypes from 'prop-types'
-import dynamic from 'next/dynamic'
+import React, {useEffect} from 'react'
+import Meta from '../components/Meta/Meta'
 
 import Splash from '../components/Splash/Splash'
 
-const Layout = dynamic(() => import('../components/Layout/Layout'));
-const Banner = dynamic(() => import('../components/Banner/Banner'));
-
-const Home = () => {
-    const [loading, setLoading] = useState(true);
+const Index = () => {
 
     useEffect( () => {
-
-        setTimeout(() => {
-            setLoading(false);
-        }, 1500 );
-
-        loading && document.body.classList.add('splash-bg');
+        document.body.classList.add('splash-bg');
 
         return () => {
             document.body.classList.remove('splash-bg')
@@ -25,19 +15,14 @@ const Home = () => {
 
     return (
         <>
-            {loading ? (
-                <Splash />
-            ) : (
-                <Layout>
-                    <Banner />
-                </Layout>
-            )}
-
+            <Meta
+                title="Nicola Acquisto"
+                description="Welcome Nicola Acquisto"
+                url="https://nicolaacquisto.com/"
+            />
+            <Splash />
         </>
     )
 }
 
-Home.propTypes = {}
-Home.defaultProps = {}
-
-export default Home;
+export default Index;

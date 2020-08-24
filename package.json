@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/dainemawer/nicolaacquisto#readme",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.1",
+    "contentful": "^7.14.6",
     "next": "^9.5.1",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
