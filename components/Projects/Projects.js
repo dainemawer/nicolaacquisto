@@ -2,38 +2,50 @@ import React from 'react'
 import Link from "next/link";
 
 import {Button, Header, Heading, IsoTope, IsoTopeItem, List, ListItem, LinkItem, Seperator, Sup, Section} from './Projects.styled'
+import {useRouter} from "next/router";
 
-const Projects = ({ projects, title }) => (
-    <Section>
-        <Header>
-            {title && <Heading>{title}</Heading>}
-            <Seperator />
-            <IsoTope>
-                <IsoTopeItem>
-                    <Button type="button">All</Button>
-                </IsoTopeItem>
-                <IsoTopeItem>
-                    <Button type="button">Branding</Button>
-                </IsoTopeItem>
-                <IsoTopeItem>
-                    <Button type="button">UX Design</Button>
-                </IsoTopeItem>
-            </IsoTope>
-        </Header>
-        <List>
-            {projects && projects.map( project => {
-                const { id, cat, slug, title, increment } = project;
+const Projects = ({ projects, title }) => {
+    const router = useRouter()
 
-                return (
-                    <ListItem key={id} data-category={cat}>
-                        <Link href={`/work/${slug}`} passHref>
-                            <LinkItem>{`${title} ${increment}`}<Sup>{increment}</Sup></LinkItem>
+    return (
+        <Section>
+            <Header>
+                {title && <Heading>{title}</Heading>}
+                <Seperator />
+                <IsoTope>
+                    <IsoTopeItem className={router.pathname === '/work' ? 'is-active' : ''}>
+                        <Link href="/work">
+                            <Button>All</Button>
                         </Link>
-                    </ListItem>
-                )
-            })}
-        </List>
-    </Section>
-)
+                    </IsoTopeItem>
+                    <IsoTopeItem className={router.pathname === '/work/branding' ? 'is-active' : ''}>
+                        <Link href="/work/branding">
+                            <Button>Branding</Button>
+                        </Link>
+                    </IsoTopeItem>
+                    <IsoTopeItem className={router.pathname === '/work/ux-design' ? 'is-active' : ''}>
+                        <Link href="/work/ux-design">
+                            <Button>UX Design</Button>
+                        </Link>
+                    </IsoTopeItem>
+                </IsoTope>
+            </Header>
+            <List>
+                {projects && projects.map( project => {
+                    const { id, slug, title } = project;
+                    const increment = `0${id}`;
+
+                    return (
+                        <ListItem key={id}>
+                            <Link as={`/work/${slug}`} href={{ pathname: `/work/[slug]`, query: {post: slug}}} passHref>
+                                <LinkItem>{`${title}`}<Sup>{increment}</Sup></LinkItem>
+                            </Link>
+                        </ListItem>
+                    )
+                })}
+            </List>
+        </Section>
+    )
+}
 
 export default Projects

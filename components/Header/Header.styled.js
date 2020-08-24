@@ -15,7 +15,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  margin-right: 1rem;
+  margin-right: 2rem;
   
   &:last-child {
     margin-right: 0;
@@ -43,4 +43,10 @@ export const Nav = styled.nav`
   @media(min-width: 768px) {
     position: static;
   }
+`;
+
+export const LogoLink = styled.a`
+  cursor: pointer;
+  display: block;
+  height: 18px;
 `;

@@ -13,7 +13,7 @@ export const bodyClassName = path => {
     let className;
 
     switch (path) {
-        case '/':
+        case '/home':
             className = 'page-home';
             break;
         case '/about':

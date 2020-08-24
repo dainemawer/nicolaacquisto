@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-import {Header, List, ListItem, LinkItem, Nav} from './Header.styled'
+import {Header, List, ListItem, LinkItem, Nav, LogoLink} from './Header.styled'
 
 const SiteHeader = () => {
     return (
         <Header itemScope=""itemType="http://schema.org/WPHeader" role="banner">
             <div itemScope itemType="https://schema.org/Organization">
-                <Link href="/" passHref>
-                    <a itemProp="url">
-                        <svg width="154" height="19" viewBox="0 0 424 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Link href="/home" passHref>
+                    <LogoLink itemProp="url">
+                        <svg width="154" height="18" viewBox="0 0 424 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M32.0482 1.2619H27.2331V33.0461H26.8384L4.73618 1.2619H0V41.6429H4.89406V9.9375H5.28874L27.312 41.6429H32.0482V1.2619Z" fill="#000000"/>
                             <path d="M41.7655 41.6429H46.4227V11.3571H41.7655V41.6429ZM44.1335 6.30952C45.9491 6.30952 47.4489 4.88988 47.4489 3.15476C47.4489 1.41964 45.9491 0 44.1335 0C42.318 0 40.8182 1.41964 40.8182 3.15476C40.8182 4.88988 42.318 6.30952 44.1335 6.30952Z" fill="#000000"/>
                             <path d="M67.8226 42.2738C74.5322 42.2738 78.9526 38.1726 79.742 32.8095H75.0847C74.2164 36.122 71.4536 38.0938 67.8226 38.0938C62.297 38.0938 58.7449 33.5193 58.7449 26.5C58.7449 19.6384 62.3759 15.1429 67.8226 15.1429C71.9273 15.1429 74.3743 17.6667 75.0847 20.4271H79.742C78.9526 14.7485 74.1375 10.9628 67.7436 10.9628C59.5342 10.9628 54.0876 17.4301 54.0876 26.6577C54.0876 35.7277 59.2974 42.2738 67.8226 42.2738Z" fill="#000000"/>
@@ -27,7 +27,7 @@ const SiteHeader = () => {
                             <path d="M395.654 42.2738C403.863 42.2738 409.389 36.0432 409.389 26.6577C409.389 17.1935 403.863 10.9628 395.654 10.9628C387.444 10.9628 381.919 17.1935 381.919 26.6577C381.919 36.0432 387.444 42.2738 395.654 42.2738ZM395.654 38.0938C389.418 38.0938 386.576 32.7307 386.576 26.6577C386.576 20.5848 389.418 15.1429 395.654 15.1429C401.89 15.1429 404.731 20.5848 404.731 26.6577C404.731 32.7307 401.89 38.0938 395.654 38.0938Z" fill="#000000"/>
                             <path d="M420.448 41.9583C422.402 41.9583 424 40.3612 424 38.4092C424 36.4572 422.402 34.8601 420.448 34.8601C418.494 34.8601 416.896 36.4572 416.896 38.4092C416.896 40.3612 418.494 41.9583 420.448 41.9583Z" fill="#000000"/>
                         </svg>
-                    </a>
+                    </LogoLink>
                 </Link>
             </div>
             <Nav itemScope="" itemType="https://schema.org/SiteNavigationElement" role="navigation">

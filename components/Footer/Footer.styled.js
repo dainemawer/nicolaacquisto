@@ -18,7 +18,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  margin-right: 1rem;
+  margin-right: 2rem;
   
   &:last-child {
     margin-right: 0;
