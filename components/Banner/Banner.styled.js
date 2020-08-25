@@ -22,7 +22,7 @@ export const Title = styled.h1`
     font-size: 2.125rem;
   }
   
-  @media (min-width: 1281px) {
+  @media (min-width: 1441px) {
     font-size: 3rem;
   }
 `;
