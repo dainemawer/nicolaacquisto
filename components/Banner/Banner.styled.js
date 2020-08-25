@@ -18,6 +18,10 @@ export const Title = styled.h1`
     padding: 0 2rem;
   }
   
+  @media (min-width: 1024px) {
+    font-size: 2.125rem;
+  }
+  
   @media (min-width: 1281px) {
     font-size: 3rem;
   }
