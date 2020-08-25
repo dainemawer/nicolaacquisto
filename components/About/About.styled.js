@@ -51,7 +51,11 @@ export const Title = styled.h2`
   margin: 0 0 2rem 0;
   white-space: break-spaces;
   
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
+    font-size: 2.4rem;
+  }
+  
+  @media (min-width: 1281px) {
     font-size: 3rem;
     margin: 0 0 4rem 0;
   }
@@ -75,7 +79,7 @@ export const Paragraph = styled.p`
   white-space: break-spaces;
   
   @media (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
   
   &:last-child {
@@ -110,7 +114,7 @@ export const List = styled.ul`
 `;
 
 export const SkillsItem = styled.li`
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.75;
 `;
 

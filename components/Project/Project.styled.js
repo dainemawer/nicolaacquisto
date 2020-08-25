@@ -41,7 +41,7 @@ export const Credits = styled.p`
 
 export const Content = styled.p`
   font-family: 'Inter', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 3rem;
