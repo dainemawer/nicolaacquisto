@@ -11,6 +11,7 @@ export const Section = styled.section`
 export const Permalink = styled.a`
   cursor: pointer;
   transition: opacity 250ms ease-in-out;
+  padding: 3rem;
   
   &:hover,
   &:focus {

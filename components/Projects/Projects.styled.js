@@ -19,10 +19,6 @@ export const Heading = styled.h1`
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.01em;
-  
-  @media(min-width: 768px) {
-    font-size: 1.875rem;
-  }
 `;
 
 export const Seperator = styled.span`
@@ -100,6 +96,7 @@ export const Header = styled.header`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  position: relative;
   
   @media(min-width: 768px) {
     margin-bottom: 0;
@@ -109,6 +106,13 @@ export const Header = styled.header`
 export const IsoTope = styled.ul`
   align-items: center;
   display: flex;
+  
+  &.hover {
+    background-color: #F3F1F1;
+    left: 154px;
+    position: absolute;
+    width: 100%;
+  }
 `;
 
 export const IsoTopeItem = styled.li`
