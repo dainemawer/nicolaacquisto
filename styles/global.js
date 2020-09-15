@@ -50,6 +50,24 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   
+  body.page-projects {
+    height: auto;
+  
+    header[role="banner"] {
+    
+      @media(min-width: 768px) {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+      }
+    }
+    
+    main {
+        height: auto;
+    }
+  }
+  
+  
   html,
   body,
   #__next {

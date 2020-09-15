@@ -37,6 +37,9 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  max-width: 1300px;
+  position: sticky;
+  z-index: 99;
   
   @media(min-width: 768px) {
     flex-direction: row;
@@ -89,6 +92,7 @@ export const Sup = styled.sup`
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
+  padding-top: 70vh;
 `;
 
 export const Header = styled.header`
@@ -96,7 +100,9 @@ export const Header = styled.header`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  max-width: 350px;
   position: relative;
+  z-index: 99;
   
   @media(min-width: 768px) {
     margin-bottom: 0;
@@ -108,10 +114,13 @@ export const IsoTope = styled.ul`
   display: flex;
   
   &.hover {
-    background-color: #F3F1F1;
-    left: 154px;
+    left: 124px;
     position: absolute;
     width: 100%;
+    
+    @media(min-width: 768px) {
+      left: 154px;
+    }
   }
 `;
 
@@ -128,5 +137,52 @@ export const IsoTopeItem = styled.li`
   
   &.is-active ${Button} {
     color: #E95D62;
+  }
+  
+  &.branding,
+  &.ux-design {
+    
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+`;
+
+export const ImageGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  @media(min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+export const ImageGridItem = styled.div`
+  flex: 0 1 calc(50% - 2rem);
+  margin-bottom: 2rem;
+`;
+
+export const ImageGridImage = styled.img`
+  max-width: 100%;
+`;
+
+export const Sticky = styled.div`
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+`;
+
+export const ImageLink = styled.a`
+  cursor: pointer;
+  transition: opacity 250ms ease-in-out;
+  will-change: opacity;
+  
+  &:hover,
+  &:focus {
+    outline: 0;
+    opacity: 0.65;
   }
 `;
