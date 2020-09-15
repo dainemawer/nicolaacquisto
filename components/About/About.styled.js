@@ -28,13 +28,12 @@ export const Image = styled.img`
   z-index: -1;
   transform: translateX(-50%);
   transition: opacity 250ms ease-in, visibility 250ms ease-in;
-  max-width: 100%;
   
   @media (min-width: 1240px) {
-    right: -3rem;
+    right: -6rem;
     top: -2rem;
     left: unset;
-    max-width: 385px;
+    max-width: 50%;
     transform: none;
   }
   
@@ -45,7 +44,7 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 2.15rem;
   font-weight: normal;
   line-height: 1.2;
   margin: 0 0 2rem 0;
@@ -53,6 +52,7 @@ export const Title = styled.h2`
   
   @media (min-width: 1024px) {
     font-size: 2.4rem;
+    max-width: 1330px;
   }
   
   @media (min-width: 1281px) {
@@ -79,7 +79,7 @@ export const Paragraph = styled.p`
   white-space: break-spaces;
   
   @media (min-width: 768px) {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
   
   &:last-child {

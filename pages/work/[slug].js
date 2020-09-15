@@ -21,7 +21,7 @@ const SingleWork = ({ work }) => {
                 description={`${title} by Nicola Acquisto`}
                 url={`https://nicolaacquisto.com/work/${slug}`}
             />
-            <Grid>
+            <Grid itemScope itemType="http://schema.org/CreativeWork">
                 <ProjectContent title={title} role={role} description={description} credits={credits} />
                 <ProjectSidebar />
             </Grid>

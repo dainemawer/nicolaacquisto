@@ -9,7 +9,7 @@ export const Section = styled.section`
 
 export const Title = styled.h1`
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.15rem;
   font-weight: 300;
   margin: 0;
   
@@ -18,7 +18,7 @@ export const Title = styled.h1`
   }
   
   @media (min-width: 1024px) {
-    font-size: 2.125rem;
+    font-size: 2.4rem;
     max-width: 1330px;
   }
   

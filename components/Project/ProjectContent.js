@@ -7,8 +7,8 @@ import {Back, Heading, Role, Credits, Content, Sticky } from './Project.styled'
 const ProjectContent = ({ title, role, description, credits }) => (
     <section>
             <Sticky>
-                    {title && <Heading>{title}</Heading>}
-                    {role && <Role>Role: {role}</Role>}
+                    {title && <Heading itemProp="name">{title}</Heading>}
+                    {role && <Role itemProp="author">Role: {role}</Role>}
                     <Credits>{documentToReactComponents(credits)}</Credits>
                     <Content>{documentToReactComponents(description)}</Content>
                     <Back onClick={() => Router.back()}>

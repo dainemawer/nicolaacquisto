@@ -1,10 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Link from 'next/link'
+import {useRouter} from "next/router"
 
 import {Header, List, ListItem, LinkItem, Nav, LogoLink} from './Header.styled'
 
 const SiteHeader = () => {
+    const router = useRouter()
+
     return (
         <Header itemScope=""itemType="http://schema.org/WPHeader" role="banner">
             <div itemScope itemType="https://schema.org/Organization">
@@ -32,12 +34,12 @@ const SiteHeader = () => {
             </div>
             <Nav itemScope="" itemType="https://schema.org/SiteNavigationElement" role="navigation">
                 <List>
-                    <ListItem>
+                    <ListItem className={router.pathname === '/work' ? 'active' : null}>
                         <Link href="/work" passHref>
                             <LinkItem>Work</LinkItem>
                         </Link>
                     </ListItem>
-                    <ListItem>
+                    <ListItem className={router.pathname === '/about' ? 'active' : null}>
                         <Link href="/about" passHref>
                             <LinkItem>About</LinkItem>
                         </Link>

@@ -14,13 +14,7 @@ export const List = styled.ul`
   padding: 0;
 `;
 
-export const ListItem = styled.li`
-  margin-right: 2rem;
-  
-  &:last-child {
-    margin-right: 0;
-  }
-`;
+
 
 export const LinkItem = styled.a`
   color: #000000;
@@ -33,6 +27,21 @@ export const LinkItem = styled.a`
   &:focus {
     color: #D96666;
     outline: 0;
+  }
+`;
+
+export const ListItem = styled.li`
+  margin-right: 2rem;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  &.active {
+  
+    & ${LinkItem} {
+      color: #D96666;
+    }
   }
 `;
 

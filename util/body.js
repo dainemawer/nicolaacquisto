@@ -25,6 +25,10 @@ export const bodyClassName = path => {
         case '/work/[slug]':
             className = 'page-project';
             break;
+        case '/work/branding':
+        case '/work/ux-design':
+            className = 'page-projects';
+            break;
     }
 
     return className;
