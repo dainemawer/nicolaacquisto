@@ -54,6 +54,11 @@ export const ListItem = styled.li`
   margin-bottom: 1rem;
   
   @media(min-width: 768px) {
+    font-size: 2.125rem;
+    margin-bottom: 0;
+  }
+  
+  @media(min-width: 1440px) {
     font-size: 3rem;
     margin-bottom: 0;
   }
@@ -63,6 +68,14 @@ export const ListItem = styled.li`
     @media (min-width: 768px) {
       content: " / ";
       padding: 0 1rem;
+    }
+  }
+  
+  &:last-child {
+    &::after {
+      @media (min-width: 768px) {
+        content: "";
+      }
     }
   }
 `;

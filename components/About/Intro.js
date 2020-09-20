@@ -11,7 +11,7 @@ const Intro = ({ isShown, setIsShown }) => {
             </Paragraph>
             <Paragraph>When I am not working, typically I'll be shooting street photography, constructing the hardest 'would you rather' questions and reading futurist novels.</Paragraph>
             <Paragraph>I enjoy working the most when I am creating thoughtful, people-centric, honest designs. I am interested in building digital products that sync human truths with a strong creative strategy.</Paragraph>
-            <Image className={isShown ? 'image-is-overlay' : ''} src="/nicola-creative.jpg" alt="Nicola Acquisto" />
+            <Image className={isShown ? 'image-is-overlay' : ''} src="/nicola.jpg" alt="Nicola Acquisto" />
         </Article>
     )
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   
@@ -29,11 +29,16 @@ export const Image = styled.img`
   transform: translateX(-50%);
   transition: opacity 250ms ease-in, visibility 250ms ease-in;
   
-  @media (min-width: 1240px) {
+  @media (min-width: 768px) {
+    left: 77%;
+    max-width: 50%;
+    top: -2.125rem;
+  }
+  
+  @media (min-width: 1280px) {
     right: -6rem;
     top: -2rem;
     left: unset;
-    max-width: 50%;
     transform: none;
   }
   
@@ -44,6 +49,7 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h2`
+  font-family: 'Playfair Display', serif;
   font-size: 2.15rem;
   font-weight: normal;
   line-height: 1.2;
@@ -52,10 +58,15 @@ export const Title = styled.h2`
   
   @media (min-width: 1024px) {
     font-size: 2.4rem;
-    max-width: 1330px;
+    max-width: 1000px;
   }
   
   @media (min-width: 1281px) {
+    font-size: 2.125rem;
+    margin: 0 0 4rem 0;
+  }
+  
+   @media (min-width: 1440px) {
     font-size: 3rem;
     margin: 0 0 4rem 0;
   }
@@ -79,7 +90,7 @@ export const Paragraph = styled.p`
   white-space: break-spaces;
   
   @media (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
   
   &:last-child {
@@ -114,13 +125,13 @@ export const List = styled.ul`
 `;
 
 export const SkillsItem = styled.li`
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.75;
 `;
 
 export const WidgetHeading = styled.h3`
   font-family: 'Inter', sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;

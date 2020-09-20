@@ -12,7 +12,7 @@ const Layout = dynamic(() => import('../../components/Layout/Layout'));
 
 const SingleWork = ({ work }) => {
 
-    const { title, slug, role, description, credits } = work;
+    const { title, slug, role, description, credits, images } = work;
 
     return (
         <Layout>
@@ -23,7 +23,7 @@ const SingleWork = ({ work }) => {
             />
             <Grid itemScope itemType="http://schema.org/CreativeWork">
                 <ProjectContent title={title} role={role} description={description} credits={credits} />
-                <ProjectSidebar />
+                <ProjectSidebar images={images} />
             </Grid>
         </Layout>
     )
