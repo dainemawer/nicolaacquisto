@@ -14,8 +14,12 @@ export const Section = styled.section`
 `;
 
 export const Article = styled.article`
-  max-width: 1030px;
+  max-width: 750px;
   position: relative;
+  
+  @media(min-width: 1440px) {
+    max-width: 1000px;
+  }
 `;
 
 export const Image = styled.img`
@@ -29,16 +33,18 @@ export const Image = styled.img`
   transform: translateX(-50%);
   transition: opacity 250ms ease-in, visibility 250ms ease-in;
   
-  @media (min-width: 768px) {
-    left: 77%;
-    max-width: 50%;
-    top: -2.125rem;
+  @media (min-width: 1024px) {
+    left: unset;
+    max-width: 65%;
+    right: -21rem;
+    top: -4.25rem;
   }
   
-  @media (min-width: 1280px) {
+  @media (min-width: 1281px) {
     right: -6rem;
     top: -2rem;
     left: unset;
+    max-width: 50%;
     transform: none;
   }
   
