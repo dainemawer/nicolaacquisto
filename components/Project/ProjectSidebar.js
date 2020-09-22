@@ -3,7 +3,6 @@ import React from 'react'
 import {Figure} from './Project.styled'
 
 const ProjectSidebar = ({ images }) => {
-    console.log(images);
     return (
         <aside>
             {images && images.map( image => {

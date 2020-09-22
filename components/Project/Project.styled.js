@@ -57,6 +57,8 @@ export const Content = styled.div`
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 3rem;
+  max-height: 186px;
+  overflow: auto;
   
   @media (min-width: 1281px) {
     font-size: 1rem;
