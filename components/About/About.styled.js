@@ -63,13 +63,9 @@ export const Title = styled.h2`
   white-space: break-spaces;
   
   @media (min-width: 1024px) {
-    font-size: 2.4rem;
-    max-width: 1000px;
-  }
-  
-  @media (min-width: 1281px) {
-    font-size: 2.125rem;
-    margin: 0 0 4rem 0;
+      font-size: 2.125rem;
+      margin: 0 0 4rem 0;
+      max-width: 1000px;
   }
   
    @media (min-width: 1440px) {
