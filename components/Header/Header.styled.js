@@ -40,7 +40,7 @@ export const ListItem = styled.li`
   &.active {
   
     & ${LinkItem} {
-      color: #D96666;
+      color: #b8191e;
     }
   }
 `;
