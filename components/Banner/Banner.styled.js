@@ -29,7 +29,7 @@ export const Title = styled.h1`
 `;
 
 export const LinkItem = styled.a`
-  color: #E95D62;
+  color: #B8191E;
   font-style: italic;
   text-decoration: none;
   transition: color 250ms ease-in;

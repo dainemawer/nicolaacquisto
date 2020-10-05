@@ -66,11 +66,15 @@ class Contentful {
                 id: entry.postId || null,
                 title: entry.title || null,
                 role: entry.role || null,
+                excerpt: entry.excerpt || null,
                 description: entry.description || null,
                 slug: entry.slug || null,
                 credits: entry.credits || null,
+                creditName: entry.creditName || null,
                 images: entry.images || null,
                 hero: entry.hero || null,
+                quote: entry.quote || null,
+                workUrl: entry.workUrl || null,
                 modified: sys.updatedAt || null,
                 published: sys.createdAt || null,
             }
@@ -86,12 +90,16 @@ class Contentful {
             id: fields.postId || null,
             title: fields.title || null,
             role: fields.role || null,
+            excerpt: fields.excerpt || null,
             description: fields.description || null,
             slug: fields.slug || null,
             credits: fields.credits || null,
+            creditName: fields.creditName || null,
             images: fields.images || null,
             hero: fields.hero || null,
-            category: fields.category || null
+            category: fields.category || null,
+            workUrl: fields.workUrl || null,
+            quote: fields.quote || null,
         }
     }
 }
