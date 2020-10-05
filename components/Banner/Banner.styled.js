@@ -36,7 +36,7 @@ export const LinkItem = styled.a`
   
   &:hover,
   &:focus {
-    color: #C4C4C4;
+    color: #d96666;
     outline: 0;
   }
 `;

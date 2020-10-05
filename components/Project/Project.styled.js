@@ -77,11 +77,11 @@ export const WorkLink = styled.a`
   
   &:hover,
   &:focus {
-    color: #D96666;
+    color: #b8191e;
     outline: 0;
     
     svg path {
-      stroke: #D96666;
+      stroke: #b8191e;
     }
   }
 `;
