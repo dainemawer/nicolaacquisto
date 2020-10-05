@@ -81,7 +81,7 @@ export const Em = styled.button`
   font-family: inherit;
   font-style: italic;
   padding: 0;
-  color: #D9575B !important;
+  color: #b8191e !important;
 `;
 
 export const Paragraph = styled.p`
