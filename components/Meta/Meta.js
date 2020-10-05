@@ -26,16 +26,16 @@ const Meta = ({ title, description, url }) => (
         <meta property="og:title" content={title} />
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:description" content={description} />
-        <meta property="og:site_name" content="Daine Mawer | Frontend Engineer" />
+        <meta property="og:site_name" content="Nicola Acquisto" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@dainemawer" />
-        <meta name="twitter:creator" content="@dainemawer" />
+        <meta name="twitter:site" content="@nicolaacquisto" />
+        <meta name="twitter:creator" content="@nicolaacquisto" />
         <meta name="twitter:url" content={url} />
-        <meta name="twitter:title" content="Daine Mawer | Frontend Engineer" />
+        <meta name="twitter:title" content="Nicola Acquisto" />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="/og-image.png" />
     </Head>
