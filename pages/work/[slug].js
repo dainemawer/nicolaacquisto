@@ -2,6 +2,9 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import Contentful from "../../contentful/contentful";
 import Meta from "../../components/Meta/Meta";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { toObject } from '../../util/toObject';
+import ProgressiveImage from 'react-progressive-image'
 
 import {Title, Role, Grid, GridDescription, Figure, Description, CreditTitle, DefinitionTitle, DefinitionGrid, DefinitionDescription, WorkLink, Quote, Side} from '../../components/Project/Project.styled'
 
@@ -9,7 +12,14 @@ const Layout = dynamic(() => import('../../components/Layout/Layout'));
 
 const SingleWork = ({ work }) => {
 
-    const { title, slug } = work;
+    const { title, slug, role, excerpt, hero, images, quote, description, workUrl, credits, creditName } = work;
+
+    const { fields } = hero;
+    const { file } = fields;
+    const { url } = file;
+    const heroAlt = fields.title;
+
+    const creditListing = toObject(credits, creditName);
 
     return (
         <Layout>
@@ -21,56 +31,61 @@ const SingleWork = ({ work }) => {
             <div itemScope itemType="http://schema.org/CreativeWork">
                 <Grid>
                     <article>
-                        <Title>Project 01</Title>
-                        <Role>Role: Lead UX Designer</Role>
-                        <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat nisl pretium.</Description>
+                        {title && (<Title>{title}</Title>)}
+                        {role && (<Role>Role: {role}</Role>)}
+                        {excerpt && (<Description>{documentToReactComponents(excerpt)}</Description>)}
                     </article>
                     <aside>
                         <CreditTitle>Credits</CreditTitle>
                         <DefinitionGrid>
-                            <DefinitionTitle>Creative Director</DefinitionTitle>
-                            <DefinitionDescription>Human</DefinitionDescription>
-                            <DefinitionTitle>Developer</DefinitionTitle>
-                            <DefinitionDescription>Human</DefinitionDescription>
-                            <DefinitionTitle>Creative Director</DefinitionTitle>
-                            <DefinitionDescription>Human</DefinitionDescription>
-                            <DefinitionTitle>Developer</DefinitionTitle>
-                            <DefinitionDescription>Human</DefinitionDescription>
+                            {Object.entries(creditListing).map( listing => {
+                                return (
+                                    <>
+                                        <DefinitionTitle>{listing[0]}</DefinitionTitle>
+                                        <DefinitionDescription>{listing[1]}</DefinitionDescription>
+                                    </>
+                                )
+                            })}
                         </DefinitionGrid>
-                        <WorkLink href="http://google.com">
-                            Visit {title}
-                            <svg width="22" height="22" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M25.0023 24.4645L24.9169 9.51653M24.9169 9.51653L9.96899 9.43111M24.9169 9.51653L8.5169 25.9165" stroke="black" strokeWidth="2.5"/>
-                            </svg>
-                        </WorkLink>
+                        {workUrl && (
+                            <WorkLink href={workUrl} target="_blank" rel="noopener noreferrer">
+                                Visit {title}
+                                <svg width="22" height="22" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25.0023 24.4645L24.9169 9.51653M24.9169 9.51653L9.96899 9.43111M24.9169 9.51653L8.5169 25.9165" stroke="black" strokeWidth="2.5"/>
+                                </svg>
+                            </WorkLink>
+                        )}
                     </aside>
                 </Grid>
                 <Figure>
-                    <img src="/project-01-05.jpg" />
+                    <ProgressiveImage src={url} placeholder="tiny-image.jpg">
+                        {(src, loading) => (
+                            <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={heroAlt} />
+                        )}
+                    </ProgressiveImage>
                 </Figure>
                 <GridDescription>
                     <article>
-                        <Quote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua magna .</p>
-                        </Quote>
+                        {quote && (<Quote><p>{quote}</p></Quote>)}
                     </article>
                     <aside>
-                        <Side>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat nisl pretium fusce id velit ut tortor pretium viverra. Senectus et netus et malesuada fames ac. Sapien eget mi proin sed libero enim sed faucibus. Vitae auctor eu augue ut. Suscipit adipiscing bibendum est ultricies integer.</Side>
-                        <Side>Sit amet mattis vulputate enim nulla aliquet. Nunc sed blandit libero volutpat sed. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Ut placerat orci nulla pellentesque dignissim enim. Eget lorem dolor sed viverra. Donec enim diam vulputate ut pharetra sit amet aliquam id. Risus nullam eget felis eget nunc lobortis.</Side>
+                        {description && <Side>{documentToReactComponents(description)}</Side>}
                     </aside>
                 </GridDescription>
-                <Figure>
-                    <img src="/project-01-05.jpg" />
-                </Figure>
-                <Figure>
-                    <img src="/project-01-05.jpg" />
-                </Figure>
-                <Figure>
-                    <img src="/project-01-05.jpg" />
-                </Figure>
-                <Figure>
-                    <img src="/project-01-05.jpg" />
-                </Figure>
+                {images && images.map( image => {
+                    const { fields } = image;
+                    const { file, title } = fields;
+                    const { url } = file;
+                    return (
+                        <Figure>
+                            <ProgressiveImage src={url} placeholder="tiny-image.jpg">
+                                {(src, loading) => (
+                                    <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={title} />
+                                )}
+                            </ProgressiveImage>
+                        </Figure>
+                    )
+                })}
             </div>
         </Layout>
     )

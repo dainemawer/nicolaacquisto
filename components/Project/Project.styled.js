@@ -14,16 +14,20 @@ export const Role = styled.h2`
   font-weight: 400;
 `;
 
-export const Description = styled.p`
-  font-family: 'Inter', sans-serif;
-  font-size: 1.375rem;
-  line-height: 1.5;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
-  
-  @media (min-width: 1024px) {
-    margin-bottom: 0;
+export const Description = styled.div`
+
+  p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.375rem;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+      
+      @media (min-width: 1024px) {
+        margin-bottom: 0;
+      }
   }
+  
 `;
 
 export const CreditTitle = styled.h3`
@@ -98,13 +102,16 @@ export const Quote = styled.blockquote`
   }
 `;
 
-export const Side = styled.p`
-  font-family: 'Inter', sans-serif;
-  font-size: 1.375rem;
-  line-height: 1.5;
-  
-  &:first-child {
-    margin-top: 0;
+export const Side = styled.div`
+
+  p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.375rem;
+      line-height: 1.5;
+      
+      &:first-child {
+        margin-top: 0;
+      }
   }
 `;
 

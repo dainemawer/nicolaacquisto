@@ -18,19 +18,19 @@ const Projects = ({ projects, title, active }) => {
                         <IsoTope className="hover">
                             <IsoTopeItem className={active === '/work' ? 'is-active all' : 'all'}>
                                 <Link href="/work">
-                                    <Button>All</Button>
+                                    <Button><span className="sr-only">View </span> All</Button>
                                 </Link>
                             </IsoTopeItem>
 
                             <IsoTopeItem className={active === '/work/branding' ? 'is-active branding' : 'branding'}>
                                 <Link href="/work/branding">
-                                    <Button>Branding</Button>
+                                    <Button><span className="sr-only">View </span> Branding</Button>
                                 </Link>
                             </IsoTopeItem>
 
                             <IsoTopeItem className={active === '/work/ux-design' ? 'is-active ux-design' : 'ux-design'}>
                                 <Link href="/work/ux-design">
-                                    <Button>UX Design</Button>
+                                    <Button><span className="sr-only">View </span> UX Design</Button>
                                 </Link>
                             </IsoTopeItem>
                         </IsoTope>
@@ -40,7 +40,7 @@ const Projects = ({ projects, title, active }) => {
                         {active === '/work' ? (
                             <IsoTopeItem className={active === '/work' ? 'is-active all' : 'all'}>
                                 <Link href="/work">
-                                    <Button>All</Button>
+                                    <Button><span className="sr-only">View </span> All</Button>
                                 </Link>
                             </IsoTopeItem>
                         ) : null}
@@ -48,7 +48,7 @@ const Projects = ({ projects, title, active }) => {
                         {active === '/work/branding' ? (
                             <IsoTopeItem className={active === '/work/branding' ? 'is-active branding' : 'branding'}>
                                 <Link href="/work/branding">
-                                    <Button>Branding</Button>
+                                    <Button><span className="sr-only">View</span> Branding</Button>
                                 </Link>
                             </IsoTopeItem>
                         ) : null }
@@ -56,7 +56,7 @@ const Projects = ({ projects, title, active }) => {
                         {active === '/work/ux-design' ? (
                             <IsoTopeItem className={active === '/work/ux-design' ? 'is-active ux-design' : 'ux-design'}>
                                 <Link href="/work/ux-design">
-                                    <Button>UX Design</Button>
+                                    <Button><span className="sr-only">View</span> UX Design</Button>
                                 </Link>
                             </IsoTopeItem>
                         ) : null }
@@ -71,7 +71,7 @@ const Projects = ({ projects, title, active }) => {
                         return (
                             <ListItem key={id}>
                                 <Link as={`/work/${slug}`} href={{ pathname: `/work/[slug]`, query: {post: slug}}} passHref>
-                                    <LinkItem>{`${title}`}<Sup>{increment}</Sup></LinkItem>
+                                    <LinkItem><span className="sr-only">View</span> {`${title}`}<Sup>{increment}</Sup></LinkItem>
                                 </Link>
                             </ListItem>
                         )
@@ -81,10 +81,10 @@ const Projects = ({ projects, title, active }) => {
             <ImageGrid>
                 {projects && projects.map( project => {
                     const { hero, slug, id } = project;
-                    const { fields, sys } = hero;
-                    const { file, postId } = fields;
+                    const { fields } = hero;
+                    const { file, title } = fields;
                     const { url } = file;
-                    return <ImageGridItem key={`thumbnail-${id}`}><Link as={`/work/${slug}`} href={{ pathname: `/work/[slug]`, query: {post: slug}}} passHref><ImageLink><ImageGridImage src={url} /></ImageLink></Link></ImageGridItem>
+                    return <ImageGridItem key={`thumbnail-${id}`}><Link as={`/work/${slug}`} href={{ pathname: `/work/[slug]`, query: {post: slug}}} passHref><ImageLink><ImageGridImage src={url} alt={title} /></ImageLink></Link></ImageGridItem>
                 })}
             </ImageGrid>
         </Section>

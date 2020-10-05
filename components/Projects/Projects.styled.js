@@ -9,7 +9,7 @@ export const Button = styled.button`
     
     &:hover,
     &:focus {
-      color: #E95D62;
+      color: #B8191E;
       outline: 0;
     }
 `;
@@ -87,7 +87,7 @@ export const LinkItem = styled.a`
   
   &:hover,
   &:focus {
-    color: #E95D62;
+    color: #B8191E;
     outline: 0;
   }
 `;
@@ -149,7 +149,7 @@ export const IsoTopeItem = styled.li`
   }
   
   &.is-active ${Button} {
-    color: #E95D62;
+    color: #B8191E;
   }
   
   &.branding,
