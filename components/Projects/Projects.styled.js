@@ -15,7 +15,7 @@ export const Button = styled.button`
 `;
 
 export const Heading = styled.h1`
-  font-family: 'Inter', serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.01em;
@@ -138,7 +138,7 @@ export const IsoTope = styled.ul`
 `;
 
 export const IsoTopeItem = styled.li`
-  font-family: 'Inter', serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.01em;
