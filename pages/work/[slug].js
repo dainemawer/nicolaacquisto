@@ -16,7 +16,7 @@ const SingleWork = ({ work }) => {
 
     const { fields } = hero;
     const { file } = fields;
-    const { url } = file;
+    const { url, details } = file;
     const heroAlt = fields.title;
 
     const creditListing = toObject(credits, creditName);
@@ -58,9 +58,9 @@ const SingleWork = ({ work }) => {
                     </aside>
                 </Grid>
                 <Figure>
-                    <ProgressiveImage src={url} placeholder="tiny-image.jpg">
+                    <ProgressiveImage src={`${url}?w=1687&h=1265`} placeholder="tiny-image.jpg">
                         {(src, loading) => (
-                            <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={heroAlt} />
+                            <img loading="lazy" style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={heroAlt} width="1687" height="1265" />
                         )}
                     </ProgressiveImage>
                 </Figure>
@@ -78,9 +78,9 @@ const SingleWork = ({ work }) => {
                     const { url } = file;
                     return (
                         <Figure>
-                            <ProgressiveImage src={url} placeholder="tiny-image.jpg">
+                            <ProgressiveImage src={`${url}?w=1687&h=1265`} placeholder="tiny-image.jpg">
                                 {(src, loading) => (
-                                    <img style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={title} />
+                                    <img loading="lazy" style={{ opacity: loading ? 0.5 : 1 }} src={src} alt={title} width="1687" height="1265" />
                                 )}
                             </ProgressiveImage>
                         </Figure>

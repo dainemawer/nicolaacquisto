@@ -39,11 +39,11 @@ export const LinkItem = styled.a`
   
   &:hover,
   &:focus {
-    color: #b8191e;
+    color: #d96666;
     outline: 0;
     
     svg path {
-      fill: #b8191e;
+      fill: #d96666;
     }
   }
 `;

@@ -77,11 +77,11 @@ export const WorkLink = styled.a`
   
   &:hover,
   &:focus {
-    color: #b8191e;
+    color: #d96666;
     outline: 0;
     
     svg path {
-      stroke: #b8191e;
+      stroke: #d96666;
     }
   }
 `;
@@ -176,10 +176,7 @@ export const GridDescription = styled.section`
 export const Figure = styled.figure`
   line-height: 0;
   left: 50%;
-  margin-bottom: 0;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  margin-top: 0;
+  margin: 0 -50vw;
   max-width: 100vw;
   position: relative;
   right: 50%;

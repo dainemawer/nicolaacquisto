@@ -84,7 +84,7 @@ const Projects = ({ projects, title, active }) => {
                     const { fields } = hero;
                     const { file, title } = fields;
                     const { url } = file;
-                    return <ImageGridItem key={`thumbnail-${id}`}><Link as={`/work/${slug}`} href={{ pathname: `/work/[slug]`, query: {post: slug}}} passHref><ImageLink><ImageGridImage src={url} alt={title} /></ImageLink></Link></ImageGridItem>
+                    return <ImageGridItem key={`thumbnail-${id}`}><Link as={`/work/${slug}`} href={{ pathname: `/work/[slug]`, query: {post: slug}}} passHref><ImageLink><ImageGridImage loading="lazy" src={`${url}?w=1560&h=1168`} alt={title} width="780" height="560" /></ImageLink></Link></ImageGridItem>
                 })}
             </ImageGrid>
         </Section>

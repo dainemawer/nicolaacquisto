@@ -25,7 +25,7 @@ export const LinkItem = styled.a`
   
   &:hover,
   &:focus {
-    color: #D96666;
+    color: #d96666;
     outline: 0;
   }
 `;
@@ -40,7 +40,7 @@ export const ListItem = styled.li`
   &.active {
   
     & ${LinkItem} {
-      color: #b8191e;
+      color: #d96666;
     }
   }
 `;

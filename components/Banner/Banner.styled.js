@@ -29,14 +29,15 @@ export const Title = styled.h1`
 `;
 
 export const LinkItem = styled.a`
-  color: #B8191E;
+  color: #d96666;
+;
   font-style: italic;
   text-decoration: none;
-  transition: color 250ms ease-in;
+  transition: opacity 250ms ease-in;
   
   &:hover,
   &:focus {
-    color: #d96666;
+    opacity: 0.65;
     outline: 0;
   }
 `;

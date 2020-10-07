@@ -59,8 +59,9 @@ class Contentful {
 
         try {
             const content = await this.fetchEntryBySlug(slug);
-            const entry = content.items[0].fields || null;
-            const sys = content.items[0].sys || null;
+            const { items } = content;
+            const entry = items[0].fields || null;
+            const sys = items[0].sys || null;
 
             return {
                 id: entry.postId || null,
