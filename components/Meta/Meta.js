@@ -24,7 +24,7 @@ const Meta = ({ title, description, url }) => (
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image" content="/opengraph.jpg" />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content="Nicola Acquisto" />
         <meta property="og:locale" content="en_US" />
@@ -37,7 +37,7 @@ const Meta = ({ title, description, url }) => (
         <meta name="twitter:url" content={url} />
         <meta name="twitter:title" content="Nicola Acquisto" />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:image" content="/opengraph.jpg" />
     </Head>
 );
 
