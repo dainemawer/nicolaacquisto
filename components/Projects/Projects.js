@@ -32,7 +32,7 @@ const Projects = ({ projects, title, active }) => {
           <Seperator />
           {hover && (
             <IsoTope className="hover">
-              <IsoTopeItem className={active === "/work" ? "is-active all" : "all"}>
+              <IsoTopeItem className={active === "/work" ? "is-active all hover" : "all"}>
                 <Link href="/work">
                   <Button>
                     <span className="sr-only">View </span> All
@@ -40,7 +40,7 @@ const Projects = ({ projects, title, active }) => {
                 </Link>
               </IsoTopeItem>
 
-              <IsoTopeItem className={active === "/work/branding" ? "is-active branding" : "branding"}>
+              <IsoTopeItem className={active === "/work/branding" ? "is-active branding hover" : "branding"}>
                 <Link href="/work/branding">
                   <Button>
                     <span className="sr-only">View </span> Branding
@@ -48,7 +48,7 @@ const Projects = ({ projects, title, active }) => {
                 </Link>
               </IsoTopeItem>
 
-              <IsoTopeItem className={active === "/work/ux-design" ? "is-active ux-design" : "ux-design"}>
+              <IsoTopeItem className={active === "/work/ux-design" ? "is-active ux-design hover" : "ux-design"}>
                 <Link href="/work/ux-design">
                   <Button>
                     <span className="sr-only">View </span> UX Design
