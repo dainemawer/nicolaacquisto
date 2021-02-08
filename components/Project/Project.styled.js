@@ -117,11 +117,11 @@ export const Grid = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 2rem 0 7.5rem 0;
 
   @media (min-width: 1024px) {
     flex-direction: row;
-    margin: 4rem 0;
+    margin: 4rem 0 11.125rem 0;
   }
 
   article {
@@ -146,11 +146,11 @@ export const GridDescription = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 4rem 0;
 
   @media (min-width: 1024px) {
     flex-direction: row;
-    margin: 4rem 0;
+    margin: 8rem 0;
   }
 
   article {
