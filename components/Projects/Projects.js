@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Link from "next/link"
+import Masonry from "react-masonry-css"
 
 import {
   Button,
@@ -110,7 +111,11 @@ const Projects = ({ projects, title, active }) => {
             })}
         </List>
       </Sticky>
-      <ImageGrid>
+      <Masonry
+        breakpointCols={{ default: 2, 768: 1 }}
+        className="work-masonry-grid"
+        columnClassName="work-masonry-grid_column"
+      >
         {projects &&
           projects.map((project) => {
             const { hero, slug, id } = project
@@ -133,7 +138,7 @@ const Projects = ({ projects, title, active }) => {
               </ImageGridItem>
             )
           })}
-      </ImageGrid>
+      </Masonry>
     </Section>
   )
 }

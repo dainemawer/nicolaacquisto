@@ -1,5 +1,5 @@
-import {normalize} from 'styled-normalize';
-import {createGlobalStyle} from 'styled-components';
+import { normalize } from "styled-normalize"
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -111,4 +111,25 @@ export const GlobalStyle = createGlobalStyle`
   .home {
     justify-content: center;
   }
-`;
+
+  .work-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -64px; /* gutter size offset */
+    width: auto;
+    justify-content: space-between;
+    width: calc(100% + 64px);
+  }
+
+  .work-masonry-grid_column {
+    padding-left: 64px; /* gutter size */
+    background-clip: padding-box;
+  }
+
+  /* Style your items */
+  .work-masonry-grid_column:last-of-type > div { 
+    display: flex;
+    justify-content: flex-end;
+  }
+`

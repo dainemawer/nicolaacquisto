@@ -105,6 +105,7 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   padding-top: 70vh;
+  width: 100%;
 `
 
 export const Header = styled.header`
