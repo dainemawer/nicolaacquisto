@@ -29,10 +29,10 @@ export const GlobalStyle = createGlobalStyle`
     
     main {
       height: auto;
-      
-      @media (min-width: 1240px) {
+      padding: 5.25rem 2rem;
+      ${"" /* @media (min-width: 1240px) {
         height: calc(100% - 172px);
-      }
+      } */}
     }
   }
   
