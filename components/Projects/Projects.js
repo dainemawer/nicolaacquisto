@@ -118,8 +118,8 @@ const Projects = ({ projects, title, active }) => {
       >
         {projects &&
           projects.map((project) => {
-            const { hero, slug, id } = project
-            const { fields } = hero
+            const { thumbnail, slug, id } = project
+            const { fields } = thumbnail
             const { file, title } = fields
             const { url } = file
             return (
